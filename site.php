@@ -35,7 +35,7 @@
         echo("<hr>");
 
         $phrase = "My name is Michael Ryan Wooldridge.";
-
+        
         // return phrase
         echo($phrase);
         echo("<br>");
@@ -43,21 +43,92 @@
         // return phrase with all lower casing
         echo strtolower($phrase);
         echo("<br>");
-
+        
         // return phrase with all upper casing
         echo strtoupper($phrase);
         echo("<br>");
-
+        
         // return a count of all characters used in the string
         echo strlen($phrase);
         echo("<br>");
-
+        
         // return index result. For example index 0 is the first letter(character) in the string (M). 4 = a.
         echo $phrase[0];
         echo("<br>");
         // changing a character at an index number:
         $phrase[34] = "!";
         echo $phrase;
+        echo("<br>");
+
+        // Replacing SubString
+        echo str_replace("Michael Ryan", "Nikki Leigh", $phrase);
+        echo("<br>");
+        // Grabbing SubString
+        // - This is grabbing the 11th index and after.
+        echo substr($phrase, 11);
+        echo("<br>");
+        // This substr will grab Michael Ryan at index 11, The number after is how many characters you want after that index.
+        echo substr($phrase, 11, 23);
+        echo("<br>");
+
+        echo("<hr>");
+        // Lesson (NUMBERS)
+        echo 12;
+        echo("<br>");
+        // PHP will not just echo 5 + 9 it will add up and give the answer to the math equaions.
+        // Addition
+        echo 5 + 9;
+        echo("<br>");
+        // Division
+        echo 10 / 2;
+        echo("<br>");
+        // Multiplication
+        echo 5 * 9;
+        echo("<br>");
+        // Subtraction
+        echo 5 - 9;
+        echo("<br>");
+        // Modulus Operator "Modulus operator will give you the remander of a division."
+        echo 10 % 3;
+        echo("<br>");
+        // PHP also has order of operations (PEMDAS)
+        echo 4 + 5 * 10;
+        echo("<br>");
+        echo (4 + 5) * 10;
+        echo("<br>");
+
+        // Number in variables
+        $num = 10;
+        // ++ will just add 1 to the number variable. Same wil -- will minus 1.
+        $num++;
+        echo $num;
+        echo("<br>");
+        // This is short hand for saying $number equals something.
+        $num += 20;
+        echo $num;
+        echo("<br>");
+        // multiplation
+        $num += 20;
+        echo $num;
+        echo("<br>");
+        // This can be done with all equations. This is the short hand code for $num = $num + 20
+
+        // FUNCTIONS!!! (MATH)
+        // Raising 2 to the 4th power.
+        echo pow(2, 4);
+        echo("<br>");
+        // Square roots.
+        echo sqrt(144);
+        echo("<br>");
+        // max / min. These functions will return the biggest or smallest number.
+        echo max(100, 20, 10, 30);
+        echo("<br>");
+        echo min(1, 2, 3, 4, 5);
+        echo("<br>");
+        // Rounds number up or down
+        echo round(3.2);
+        echo ("<br>");
+        echo("<hr>")
     ?>
 </body>
 </html>
