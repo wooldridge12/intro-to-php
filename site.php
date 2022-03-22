@@ -128,7 +128,31 @@
         // Rounds number up or down
         echo round(3.2);
         echo ("<br>");
-        echo("<hr>")
+        echo("<hr>");
+    ?>
+
+<!-- USER INPUT!!! -->
+
+    <!-- This Form is for USER INPUT -->
+    <!-- This is step 1 "Let user put name into box." -->
+    <!-- action is set to the doc name at the top for example site.php -->
+    <form action="site.php" method="get">
+        Name: <input type="text" name="name">
+        <br>
+        Age: <input type="number" name="age">
+        <input type="submit">
+    </form>
+    Hello <?php 
+        // First you need a HTML form.
+        // This is step 2 (Hold onto the data / access the users info.)
+        // Here we grabbing the name="name"
+        echo  $_GET["name"]
+    ?>
+    <br>
+    Your age is <?php 
+        // Here we are doing the same thing but grabbing the age.
+        // If you get an error about unidentified Array this just means no data so enter in your age and the error will go away.
+        echo $_GET["age"]
     ?>
 </body>
 </html>
