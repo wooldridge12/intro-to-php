@@ -192,5 +192,39 @@
         echo "$pluralNoun are bule <br>";
         echo "I love $person <br>";
     ?>
+
+    <!-- GET and POST! -->
+    <!-- GET When to use: 
+            GET will show all user info in the URL parameter. EVEN PASSWORDS!!!
+            GET is not secure-->
+    <!-- POST When to use: When using a password or wanting security.
+            POST is secure.
+            POST is more common but not always needed for example, Google. When your search something up on google notice everything in the URL parameter. This is a GET method. "Google may not be using php but it is an example of unsecure work. Easy for user to relook up what they may want." -->
+
+            <!-- POST METHOD -->
+    <form action="site.php" method="post">
+        Password: <input type="password" name="password">
+        <input type="submit">
+    </form>
+    <?php 
+        echo $_POST["password"];
+    ?>
+    <hr>
+
+    <!-- ARRAYS!!! -->
+
+    <?php
+        $names = array("Mikey", "Nikki", "Lisa", "Sean");
+
+        // Updating array
+        $names[0] = "Arox";
+        // add array elements
+        $names[4] = "Tina";
+        // Show array on webpage.
+        echo $names[4];
+        echo "<br>";
+        // Count how many elements are in an array. This answewr is 5 because we are NOT counting index we are counting normally.
+        echo count($names)
+    ?>
 </body>
 </html>
