@@ -152,7 +152,45 @@
     Your age is <?php 
         // Here we are doing the same thing but grabbing the age.
         // If you get an error about unidentified Array this just means no data so enter in your age and the error will go away.
-        echo $_GET["age"]
+        echo $_GET["age"];
+
+        echo("<hr>");
+    ?>
+
+    <!-- CALCULATOR -->
+    <form action="site.php" method="get">
+        <!-- Inthis foorm we are grabbing num1 and num2. These will be added up for our calculator. -->
+        <input type="number" name="num1">
+        <br>
+        <input type="number" name="num2">
+        <input type="submit">
+    </form>
+        <br>
+    Answer: <?php 
+        echo $_GET["num1"] + $_GET["num2"]
+        // CHECK URL! Notice the url has the math equation. You can change the values and it will work.
+    ?>
+    <hr>
+
+    <!-- Mad lib -->
+    <form action="site.php" method="get">
+        <!-- In this form we need to grab a color, plural noun, and a person. -->
+        Color: <input type="text" name="color"> <br>
+        Plural noun: <input type="text" name="pluralNoun"> <br>
+        Person: <input type="text" name="person"> <br>
+        <input type="submit">
+    </form>
+    <br><br>
+    <?php 
+        // Lets set a variable equal to the get method to grab the user input and place it in the story.
+        $color = $_GET["color"];
+        $pluralNoun = $_GET["pluralNoun"];
+        $person = $_GET["person"];
+
+        // Here is the story with the variable in use.
+        echo "Roses are $color <br>";
+        echo "$pluralNoun are bule <br>";
+        echo "I love $person <br>";
     ?>
 </body>
 </html>
