@@ -244,5 +244,25 @@
     <hr>
  
     <!-- Associattive Arrays -->
+    <form action="site.php" method="post">
+       Name:<input type="text" name="student">
+
+        <input type="submit">
+    </form>
+
+    <?php 
+        // An associative array allows you to store a series of key value pairs.
+
+        // This example we are working for a school. Here we wants to keep track of students and their grades on a test. So we are storing 2 data values; name, test grade.
+        $grades = array("Mikey"=>"A+", "Nikki"=>"C+", "Lisa"=>"B+");
+        // Mikey = KEY is mapped to A+ = VALUE  -Make sure keys are unique values can be the same though.
+        $grades["Mikey"] = "F";
+        echo $grades["Mikey"];
+        echo"<br>";
+        // grabbing value of user textbox. This will render to the user the value of the key they typed in.
+        echo $grades[$_POST["student"]];
+
+    ?>
+    
 </body>
 </html>
