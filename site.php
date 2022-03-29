@@ -226,5 +226,23 @@
         // Count how many elements are in an array. This answewr is 5 because we are NOT counting index we are counting normally.
         echo count($names)
     ?>
+
+    <!-- CHECKBOXES -->
+
+    <form action="site.php" method="post">
+        Apples: <input type="checkbox" name="fruits[]" value="apples"><br>
+        Oranges: <input type="checkbox" name="fruits[]" value="oranges"><br>
+        Bananas: <input type="checkbox" name="fruits[]" value="bananas"><br>
+
+        <input type="submit">
+    </form>
+    <?php 
+        $fruits = $_POST["fruits"];
+        echo $fruits[0]
+    ?>
+
+    <hr>
+ 
+    <!-- Associattive Arrays -->
 </body>
 </html>
