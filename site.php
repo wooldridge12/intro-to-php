@@ -263,6 +263,29 @@
         echo $grades[$_POST["student"]];
 
     ?>
-    
+    <hr>
+    <!-- FUNCTIONS -->
+    <!-- A function is a single task that can be used multiple times and places throughout the program. -->
+    <?php 
+        // Create a function that says HI! to the user.
+        function sayHi(){
+            echo "Hello User <br>";
+        }
+
+        // calling function ssayHi()
+        sayHi();
+
+        // Now lets say Hello to a users name!
+        function sayHiToUserName($name){
+            echo "Hello $name <br>";
+        }
+        // Will print out any name given here so Hello Mikey
+        sayHiToUserName("Mikey");
+        // Now remember functions can be used multiple times so say hello to Nikki and Lisa.
+        sayHiToUserName("Nikki");
+        sayHiToUserName("Lisa");
+        // You can pass in as many parameters($name) as you want and call them by just a comma.
+    ?>
+    <hr>
 </body>
 </html>
