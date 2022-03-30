@@ -287,5 +287,20 @@
         // You can pass in as many parameters($name) as you want and call them by just a comma.
     ?>
     <hr>
+
+    <!-- Return Statements -->
+    <?php 
+    // Lets create a function that cubes a number.
+    // Notice the return statement. This will return the cubeResult back to the user.
+    // Return will break us out of the function. Anything below a return will never be read.
+        function cube($num){
+            return $num * $num * $num;
+        }
+        $cubeResult = cube(4);
+
+        echo $cubeResult;
+    ?>
+
+    <!-- IF Statements -->
 </body>
 </html>
