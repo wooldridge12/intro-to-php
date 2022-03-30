@@ -300,7 +300,41 @@
 
         echo $cubeResult;
     ?>
+    <br>
 
     <!-- IF Statements -->
+    <!-- If a condition is TRUE then perform the action given below. If not which is FALSE then move on. -->
+    I wake up
+    If I'm hungry
+        I eat breakfast
+
+    I look at my phone
+    If it's about to die
+        I charge it
+
+    I leave my house
+    If it's cloudy
+        I bring an umbrella
+    Otherwise
+        I bring sunglasses
+
+        <br>
+    <?php
+    // Operators && this is an and operator this will check for both parameters to be true or false, If one is false they are both false though. || OR operator this will check to see if one or the other is true if so do the action below.
+    // If you need another condition then that is where else if will come in.
+    // Negation operator will do the opposite of what you specify. 
+        $isMale = false;
+        $isTall = true;
+        if ($isMale && $isTall){
+            echo "You are a tall male";
+        } elseif($isMale && !$isTall){
+            echo "You are a short male";
+        } elseif(!$isMale && $isTall){
+            echo "You are not male but are tall";
+        } else {
+            echo "You are not tall and not male";
+        }
+    ?>
+    <!-- If statements Comparisons -->
 </body>
 </html>
