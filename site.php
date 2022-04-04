@@ -392,5 +392,37 @@
         }
 
     ?>
+    <hr>
+
+    <!-- Switch statements -->
+    <!-- switch is used when comparring a bunch of values. -->
+    <form action="site.php" method="post">
+        What was your grade?
+        <input type="text" name="grade">
+        <input type="submit">
+    </form>
+    <?php
+        $grade = $_POST["grade"];
+        
+        switch($grade){
+            case "A":
+                echo "You did amazing!";
+                break;
+            case "B":
+                echo "You did pretty good!";
+                break;
+            case "C":
+                echo "You passed.";
+                break;
+            case "D":
+                echo "You can do better.";
+                break;
+            case "F":
+                echo "You failed.";
+                break;
+            default:
+                echo "Invalid grade.";
+        }
+    ?>
 </body>
 </html>
