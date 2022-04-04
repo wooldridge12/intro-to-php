@@ -335,6 +335,62 @@
             echo "You are not tall and not male";
         }
     ?>
+    <hr>
     <!-- If statements Comparisons -->
+    <?php
+    // Figure out if num1 or num2 is bigger then return the answer back to the user.
+        function getMax($num1, $num2){
+            if($num1 > $num2){
+                return $num1;
+            } else {
+                return $num2;
+            }
+        }
+
+        echo getMax(110, 90);
+        echo "<br>";
+    // Now lets try the function with 3 parameters.
+        function getMaxWithThreeParameters($num1, $num2, $num3){
+            if($num1 >= $num2 && $num1 >= $num3){
+                return $num1;
+            } elseif($num2 >= $num1 && $num2 >= $num3){
+                return $num2;
+            } else {
+                return $num3;
+            }
+        }
+        echo getMaxWithThreeParameters(500, 900, 400)
+    ?>
+    <hr>
+
+    <!-- Building a fully functional Calculator -->
+
+    <form action="site.php" method="post">
+        <!-- Notice the input tag step. This allows us to use number 5.123. Without step you will only have whole numbers. -->
+        First Number:<input type="number" step="0.001" name="num1"><br>
+        Operator: <input type="text" name="op"><br>
+        Second Number:<input type="number" step="0.001" name="num2"><br>
+
+        <input type="submit">
+
+    </form>
+    <?php
+        $num1 = $_POST["num1"];
+        $num2 = $_POST["num2"];
+        $op = $_POST["op"];
+
+        if($op == "+"){
+            echo $num1 + $num2;
+        } elseif($op == "-"){
+            echo $num1 - $num2;
+        } elseif($op == "*" || $op == "x"){
+            echo $num1 * $num2;
+        } elseif($op == "/"){
+            echo $num1 / $num2;
+        } else {
+            echo "Invalid Operator";
+        }
+
+    ?>
 </body>
 </html>
