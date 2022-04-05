@@ -424,5 +424,43 @@
                 echo "Invalid grade.";
         }
     ?>
+    <hr>
+    <!-- WHILE LOOP -->
+        <?php
+        // Check the condition to be true or false, if true, then exicute the loop body code.
+            $index = 1;
+
+            while($index <= 5){
+                echo "$index <br>";
+                $index++;
+            }
+            echo "<hr>";
+            // Do while loop
+            $doLoop = 6;
+
+            do{
+                echo "$index <br>";
+                $doLoop++;
+            }while($doLoop <= 5)
+            // In a do loop we reverse the order. So exicute the loop body then check condition
+            // So since the condition is false. We still just get the index.
+        ?>
+        <hr>
+        <!-- FOR LOOPS -->
+            <!-- Keep track of an interated variable. -->
+            <?php
+            // We are doing the same thing as the while loop but in fewer lines of code.
+                for($i = 1; $i <= 5; $i++){
+                    echo "$i <br>";
+                }
+                echo "<hr>";
+                
+            // Lucky numbers exercise.
+            $luckyNumbers = array(4, 8, 14, 15, 16, 23, 42);
+
+            for($lucky = 0; $lucky < count($luckyNumbers); $lucky++){
+                echo "$luckyNumbers[$lucky] <br>";
+            }
+            ?>
 </body>
 </html>
