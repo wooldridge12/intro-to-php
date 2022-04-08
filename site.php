@@ -462,5 +462,17 @@
                 echo "$luckyNumbers[$lucky] <br>";
             }
             ?>
+            <hr>
+
+
+            <!-- INCLUDE -->
+            <?php
+                // In this exercise we want our website to have the same header and footer throughout our website.
+                // First lets create two new files. Header file and a footer file.
+
+                include "header.html"
+            ?>
+            <p>This is my super sick website!!!</p>
+            <?php include "footer.html"?>
 </body>
 </html>
