@@ -465,7 +465,7 @@
             <hr>
 
 
-            <!-- INCLUDE -->
+            <!-- INCLUDE HTML -->
             <?php
                 // In this exercise we want our website to have the same header and footer throughout our website.
                 // First lets create two new files. Header file and a footer file.
@@ -474,5 +474,21 @@
             ?>
             <p>This is my super sick website!!!</p>
             <?php include "footer.html"?>
+
+            <!-- INCLUDE PHP -->
+            <?php
+                $title = "My first post";
+                $author = "Mikey";
+                $wordCount = 400; 
+                include "article-header.php";
+            ?>
+            <hr>
+            <?php
+                include "useful-tools.php";
+                echo $feetInMile;
+            // Note to remember: When calling a function just type the functions name and whatever parameters it needs inside. No need for a $.
+                sayBye("Mikey");
+            ?>
+            <hr>
 </body>
 </html>
