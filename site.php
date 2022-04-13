@@ -490,5 +490,46 @@
                 sayBye("Mikey");
             ?>
             <hr>
+
+            <!-- CLASSES AND OBJECTS -->
+            <?php
+                // We are going to create a software to help a library keep track of all of there books.
+                // We will start off by creating a class:
+                class Book{
+                    var $title;
+                    var $author;
+                    var $pages;
+
+                    // Here we are learning constructors.
+                    function __construct($aTitle, $aAuthor, $aPages){
+                        // echo "New Book Created <br>";
+                        $this->title = $aTitle;
+                        $this->author = $aAuthor;
+                        $this->pages = $aPages;
+                    }
+                }
+
+                // Here are objects. So objects are the actual books. 
+                // Lets simplify these objects!
+                // $book1 = new Book();
+                // $book1->title = "Harry Potter";
+                // $book1->author = "JK Rowling";
+                // $book1->pages = 400;
+                $book1 = new Book("Harry Potter", "JK Rowling", 400);
+                // Now book one title is wrong so lets update it.
+                $book1->title = "Hunger Games";
+
+                $book2 = new Book("Lord of the Rings", "Tolkien", 350);
+
+                // $book2 = new Book();
+                // $book2->title = "Lord of the Rings";
+                // $book2->author = "Tolkien";
+                // $book2->pages = 350;
+            
+                echo $book1->title;
+                echo "<br>";
+                echo $book2->title;
+            ?>
+
 </body>
 </html>
