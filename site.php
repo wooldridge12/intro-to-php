@@ -530,6 +530,38 @@
                 echo "<br>";
                 echo $book2->title;
             ?>
+            <hr>
+
+            <!-- OBJECT FUNCTIONS -->
+            <?php
+                class Student {
+                    var $name;
+                    var $major;
+                    var $gpa;
+
+                    function __construct($name, $major, $gpa){
+                        $this->name = $name;
+                        $this->major = $major;
+                        $this->gpa = $gpa;
+                    }
+
+                    // Here we are creating a new function for honor roll
+                    function hasHonors(){
+                        if($this->gpa >=3.5){
+                            return "$this->name, Congrats on Honor Roll";
+                        }
+                        return "$this->name, Better luck next time.";
+                    }
+                }
+
+                // By using a Object Function lets see who is on the Honor roll. Honor roll is a min of 3.5
+                $student1 = new Student("Mikey", "Computer Science", 3.8);
+                $student2 = new Student("Nikki", "Business", 4.0);
+                $student3 = new Student("Lisa", "Nursing", 3.2);
+                $student4 = new Student("Sean", "Art", 2.6);
+
+                echo $student4->hasHonors();
+            ?>
 
 </body>
 </html>
