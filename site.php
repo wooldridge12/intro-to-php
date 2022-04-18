@@ -562,6 +562,41 @@
 
                 echo $student4->hasHonors();
             ?>
+            <hr>
 
+            <!-- GETTERS AND SETTERS -->
+            <?php
+                class Movie {
+                    // public is open to everywhere.
+                    public $title;
+                    // private can only be accessed inside the function.
+                    private $rating;
+
+                    function __construct($title, $rating){
+                        $this->title = $title;
+                        $this->setRating($rating);
+                    }
+
+                    // Here is a getter
+                    function getRating(){
+                        return $this->rating;
+                    }
+
+                    // Here is a setter checkingif the rating matches actual ratings not just any random word.
+                    function setRating($rating){
+                        if($rating == "G" || $rating == "PG" || $rating == "PG-13" || $rating == "R" || $rating == "NR"){
+                            $this->rating = $rating;
+                        }else{
+                            $this->rating = "NR";
+                        }
+                    }
+                }
+
+                $avengers = new Movie("Avengers", "PG-13");
+
+                $avengers->setRating("PG");
+                echo $avengers->getRating();
+
+            ?>
 </body>
 </html>
