@@ -598,5 +598,49 @@
                 echo $avengers->getRating();
 
             ?>
+            <hr>
+
+            <!-- INHERITANCE -->
+            <?php
+                class Chef{
+                    function makeChicken(){
+                        echo "The chef makes chicken <br>";
+                    }
+                    function makeSalad(){
+                        echo "The chef makes salad <br>";
+                    }
+                    function makeSpecialDish(){
+                        echo "The chef makes bbq ribs <br>";
+                    }
+                }
+                // The italian chef can do everything that the normal chef can do but also make pasta. All you have to do herer is just add extends Chef.
+                class ItalianChef extends Chef{
+                    function makePasta(){
+                        echo "The Italian chef makes pasta <br>";
+                    }
+                    // Override specialDish so that the italian chef make chicken parm instead of bbq ribs.
+                    function makeSpecialDish(){
+                        echo "The Italian chef makes chicken parm <br>";
+                    }
+                }
+
+                $chef = new Chef();
+                $chef->makeChicken();
+
+                $italianChef = new italianChef();
+                $italianChef->makeSalad();
+
+                $italianChef = new italianChef();
+                $italianChef->makePasta();
+                
+                echo "<br><br>";
+
+                // Override a function.
+                $chef = new Chef();
+                $chef->makeSpecialDish();
+
+                $italianChef = new italianChef();
+                $italianChef->makeSpecialDish();
+            ?>
 </body>
 </html>
